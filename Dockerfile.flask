@@ -1,0 +1,17 @@
+FROM python:3
+
+EXPOSE "5000"
+
+ENV FLASK_APP=script.py
+
+ENV PYTHONDONTWRITEBYTECODE=1
+
+ENV PYTHONUNBUFFERED=1
+
+COPY ficheroRequirements.txt .
+RUN python -m pip install -r ficheroRequirements.txt
+
+WORKDIR /app
+COPY . /app
+
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
