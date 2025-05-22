@@ -6,7 +6,5 @@ Prácticas de la fp de primero de DAM en la empresa HPCDS
 
 Asegúrate de tener instalado Python 3. Luego, instala las dependencias necesarias:
 
-```text
-flask
-requests
-sqlalchemy
+```bash
+pip install flask requests sqlalchemy
